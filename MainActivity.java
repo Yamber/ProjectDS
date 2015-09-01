@@ -251,14 +251,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void uninstallApp(int id,int position){
         String b = allApps.get(position).getTitle();
-        Log.d("aaaaa", b);
+
         Toast.makeText(this, "function 2 called", Toast.LENGTH_SHORT).show();
 
         String pn = allApps.get(position).getPackageName();
 
         Uri packageUri = Uri.parse("package:" + pn);
         Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
-        startActivity(uninstallIntent);
+        startActivity(uninstallIntent); //Transfers the user to an intent to handle the uninstall
         allApps.remove(position);
         Adapter.notifyDataSetChanged();
     }
