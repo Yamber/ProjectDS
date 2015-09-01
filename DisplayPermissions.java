@@ -22,21 +22,13 @@ public class DisplayPermissions extends AppCompatActivity {
 
         permissionsListView = (ListView) findViewById(R.id.permissionsListView);
 
-        Bundle b = getIntent().getExtras();
-        Log.d("hey", b.toString());
+        Bundle b = getIntent().getExtras(); //Gets bundle from the mainActivity
 
         ArrayList<String> permissions = (ArrayList<String>) b.getSerializable("key");
 
-        Log.d("permission", permissions.get(0));
-
-        Log.d("debug", "ufdhfhu");
         permissionAdapter = new ArrayAdapter<String>(this, R.layout.permissionlist, permissions);
 
-        Log.d("debug1", "gfadga");
-
         permissionsListView.setAdapter(permissionAdapter);
-
-        Log.d("debug", "huhd;af");
 
 
     }

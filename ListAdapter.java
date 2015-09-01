@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Darren on 30/08/2015.
+ * Created by Darren on 30/07/2015.
  * Adapted from http://www.androprogrammer.com/2013/10/get-installed-application-in-list-view.html
  */
 public class ListAdapter extends BaseAdapter {
@@ -47,8 +47,6 @@ public class ListAdapter extends BaseAdapter {
         public View getView(final int position, View convertView, ViewGroup parent) {
             final ViewHolder holder;
 
-            Log.d("dddd", "addf");
-
             LayoutInflater inflater = context.getLayoutInflater();
 
             if (convertView == null) {
@@ -71,7 +69,7 @@ public class ListAdapter extends BaseAdapter {
             String appName = apps.get(position).getTitle();
             appIcon.setBounds(0, 0, 40, 40);
             holder.apkName.setCompoundDrawables(appIcon, null, null, null);
-            holder.apkName.setCompoundDrawablePadding(15);
+            holder.apkName.setCompoundDrawablePadding(35);
             holder.apkName.setText(appName);
 
             return convertView;
